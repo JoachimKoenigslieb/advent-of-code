@@ -1,8 +1,6 @@
 use std::fs;
 
 fn main() {
-    println!("Hello, world!");
-
 	let contents = fs::read_to_string("./src/input").unwrap();
 	let groups = contents.split("\n\n");
 
@@ -25,5 +23,13 @@ fn main() {
 
 	let max = sums.iter().max().unwrap();
 
-	print!("{}\n", max);
+	print!("max ${}\n", max);
+
+	{
+		sums.sort();
+		let max_three: i32 = sums.iter().rev().take(3).sum();
+	
+		print!("max three: {}\n", max_three)
+	}
+
 }
