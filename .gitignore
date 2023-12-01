@@ -1,4 +1,4 @@
-*/target
-*/debug
-*/Cargo.lock
+*/**/target
+*/**/debug
+*/**/Cargo.lock
 */**/*.rs.bk
